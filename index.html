@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font.css">
+</head>
+<body>
+    <div class="header-container">
+        <h1 class="silkscreen-bold">Accessible Components</h1>
+        <h3 class="orbitron">make accessible text box</h3>
+    </div>
+    <div class="search-container">
+        <input
+            type="text"
+            id="textBox"
+            class="search-box"
+            placeholder="What do you want..."
+            aria-label="Search input field"
+        />
+        <button id="searchBtn" class="search-btn" disabled>Search</button>
+    </div>
+    <div class="selector-container">
+        <h3>Click the buttons to see the effects</h3>
+        <div class="description-container">
+            <button class="hover-btn">Hover</button> 
+            <p>
+                Move your mouse over an element to check if it’s interactive.
+            </p>
+        </div>
+        <div class="description-container">
+            <button class="focus-btn">Focused</button>
+            <p>
+                When an element is ready for input. You can usually move focus using the Tab key or simply click on it.
+            </p>
+        </div>
+        <div class="description-container">
+            <button class="active-btn">Active</button>
+            <p>
+                When you click or press down on an element, showing it’s being interacted with.
+            </p>
+        </div>
+            
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
