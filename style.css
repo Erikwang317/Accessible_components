@@ -37,11 +37,11 @@ body {
 
     h3 {
         color: white;
-        text-shadow: 2px 2px 4px #bebebe;
+        text-shadow: 1px 1px 4px #bebebe;
     }
 
     button {
-        background: #444;
+        background: #666;
         color: white;
         border: none;
         padding: 15px 30px;
@@ -52,12 +52,13 @@ body {
         font-size: 14px;
         box-shadow: 0 3px 2px rgba(255, 255, 255, 0.2);
         text-shadow: 2px 2px 4px #151515;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 700;
+        font-family: "Monoton", serif;;
     }
 
     button:hover {
-        background: #007BFF;
+        background: #444;
     }
 
     p {
@@ -74,10 +75,10 @@ body {
     justify-content: center;
     margin: 50px auto 10px;
     width: 40vw;
-    padding: 10px;
+    padding: 20px;
     background: #f4f4f4;
-    border-radius: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.8);
     border: 2px solid #1b1c1c;
     transition: 0.3s ease;
 }
@@ -91,10 +92,11 @@ body {
     width: 100%;
     padding: 10px;
     border: 2px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
     outline: none;
     transition: all 0.3s ease;
     font-size: 16px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .search-box:focus {
@@ -131,13 +133,14 @@ body {
     padding: 10px;
     background-color: #ccc;
     border: none;
-    border-radius: 5px;
+    border-radius: 12px;
     cursor: not-allowed;
     font-size: 16px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
 }
 
 .search-btn.active {
-    background-color: #007BFF;
+    background-color: #000000;
     cursor: pointer;
     color: white;
 }
@@ -152,4 +155,8 @@ body {
     height: 15vh;
     box-shadow: 0 5px 8px rgba(255, 254, 254, 0.2);
     padding: 20px;
+
+    p {
+        font-family: "Black Ops One", serif;
+    }
 }

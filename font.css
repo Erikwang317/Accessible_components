@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9&family=Orbitron:wght@400..900&family=Silkscreen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Jacquarda+Bastarda+9&family=Monoton&family=Orbitron:wght@400..900&family=Silkscreen:wght@400;700&display=swap');
 
 .font-jacquarda {
     font-family: "Jacquarda Bastarda 9", serif;
@@ -24,3 +24,16 @@
     font-weight: 700;
     font-style: normal;
 }
+
+.black-ops-one-regular {
+    font-family: "Black Ops One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.monoton-regular {
+    font-family: "Monoton", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  

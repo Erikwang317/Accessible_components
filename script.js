@@ -6,6 +6,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const focusBtn = document.querySelector(".focus-btn");
     const activeBtn = document.querySelector(".active-btn");
 
+    function toggleButton() {
+        if (textBox.value.trim() === "") {
+            searchBtn.disabled = true;
+        } else {
+            searchBtn.disabled = false;
+        }
+    }
+
     textBox.addEventListener("keypress", function (event) {
         if (event.key === "Enter") {
             textBox.classList.add("active");
@@ -17,8 +25,13 @@ document.addEventListener("DOMContentLoaded", function() {
     searchBtn.addEventListener("click", function () {
         if (textBox.value.trim() === "") {
             alert("Please enter a search term.");
+            searchBtn.disabled = true;
+        } else {
+            searchBtn.disabled = false;
         }
     });
+
+    textBox.addEventListener("input", toggleButton);
 
     hoverBtn.addEventListener("click", function () {
         textBox.classList.toggle("hover-effect");
