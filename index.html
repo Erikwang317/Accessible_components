@@ -1,50 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="font.css">
-</head>
-<body>
-    <div class="header-container">
-        <h1 class="silkscreen-bold">Accessible Components</h1>
-        <h3 class="orbitron">make accessible text box</h3>
-    </div>
-    <div class="search-container">
-        <input
-            type="text"
-            id="textBox"
-            class="search-box"
-            placeholder="What do you want..."
-            aria-label="Search input field"
-        />
-        <button id="searchBtn" class="search-btn" disabled>Search</button>
-    </div>
-    <div class="selector-container">
-        <h3>Click the buttons to see the effects</h3>
-        <div class="description-container">
-            <button class="hover-btn">Hover</button> 
-            <p>
-                Move your mouse over an element to check if it’s interactive.
-            </p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="font.css">
+    </head>
+    <body>
+        <div class="header-container">
+            <h1>Make Accessible Text Boxs</h1>
         </div>
-        <div class="description-container">
-            <button class="focus-btn">Focused</button>
-            <p>
-                When an element is ready for input. You can usually move focus using the Tab key or simply click on it.
-            </p>
-        </div>
-        <div class="description-container">
-            <button class="active-btn">Active</button>
-            <p>
-                When you click or press down on an element, showing it’s being interacted with.
-            </p>
-        </div>
+        <div class="assignment-container">
+            <h2>Screenshots of Text Boxes From Different Platforms</h2>   
+            <div class="row-container">
+                <div class="image-container image-container-small">
+                    <p>ChatGPT Text Box</p>
+                    <img src="./assets/chatGPT.jpeg" alt="ChatGPT textbox" class="clickable-img"/>
+                </div>
+        
+                <div class="image-container image-container-small">
+                    <p>Instagram Text Box</p>
+                    <img src="./assets/instagram.jpeg" alt="Instagram textbox" class="clickable-img"/>
+                </div>
+        
+                <div class="image-container image-container-small">
+                    <p>Slack Text Box</p>
+                    <img src="./assets/slack.jpeg" alt="Slack textbox" class="clickable-img"/>
+                </div>
+            </div>
+            <div class="text-container">
+                <p> ChatGPT provides flexible input options and logical navigation, while Slack offers clear visual feedback but may overwhelm with too many buttons. Instagram, optimized for mobile, lacks strong visual indicators and structured keyboard navigation.</p>
+            </div>
+            <hr>
+            <h2>Input & Output of Each Platform</h2>
+            <div class="row-container">
+                <div class="image-container image-container-large">
+                    <p>Text Box Input</p>
+                    <img src="./assets/part1.jpeg" alt="part1 table" class="clickable-img"/>
+                </div>
+                <div class="image-container image-container-large">
+                    <p>Text Box Output</p>
+                    <img src="./assets/part2.jpeg" alt="part2 table" class="clickable-img"/>
+                </div>
+            </div>
+            <div class="text-container">
+                <p>Different platforms prioritize accessibility and usability in unique ways. Besides, chatGPT and Slack focus more on web-end features while instragram designs better mobile UI.</p>
+            </div>
+            <hr>
+            <h2> Mouse State Models Revision</h2>
+            <div class="row-container"> 
+                <div class="image-container image-container-large">
+                    <p>Mouse State Model Before</p>
+                    <img src="./assets/mouse.jpeg" alt="mouse user model" class="clickable-img"/>
+                </div>
+                <div class="image-container image-container-large">
+                    <p>Mouse State Model After</p>
+                    <img src="./assets/revised_mouse.jpeg" alt="revised mouse user model" class="clickable-img"/>
+                </div>
+            </div>
+            <div class="text-container">
+                <p class="text-bold">Revision & Trade-off: </p>
+                <p>The original on hover state didn’t have clear visual changes and miss a separate screen reader to locate the text box for users with vision disability. New design added clear color changes and screen reader explanations, potentially makes sacrifice in subtlety and aesthetics, for better accessibility.</p>
+            </div>
+            <h2 class="add-space-top"> Keyboard State Models Revision</h2>
+            <div class="row-container"> 
+                <div class="image-container image-container-large">
+                    <p>Keyboard State Model Before</p>
+                    <img src="./assets/keyboard.jpeg" alt="keyboard user model" class="clickable-img"/>
+                </div>
+                <div class="image-container image-container-large">
+                    <p>Keyboard State Model After</p>
+                    <img src="./assets/revised_keyboard.jpeg" alt="revised keyboard textbox" class="clickable-img"/>
+                </div>
+            </div>
+            <div class="text-container">
+                <p class="text-bold">Revision & Trade-off: </p>
+                <p>The prior design can direct activate text box through any keyboard input, prone to accidental typing. New design added an explicit "Enter" key confirmation to activate input. But this edit did sacrifice some efficiency and learnability.</p>
+            </div>
+            <hr>
+            <h2>Playground to Try Different States of a Text Box</h2>
+            <div class="search-container">
+                <input
+                    type="text"
+                    id="textBox"
+                    class="search-box"
+                    placeholder="What do you want..."
+                    aria-label="Search input field"
+                />
+                <button id="searchBtn" class="search-btn" disabled>Search</button>
+            </div>
+            <div class="selector-container">
+                <h2>Click the buttons to see the effects</h2>
+                <div class="description-container">
+                    <button class="hover-btn">Hover</button> 
+                    <p>
+                        Move your mouse over an element to check if it’s interactive.
+                    </p>
+                </div>
+                <div class="description-container">
+                    <button class="focus-btn">Focused</button>
+                    <p>
+                        When an element is ready for input. You can usually move focus using the Tab key or simply click on it.
+                    </p>
+                </div>
+                <div class="description-container">
+                    <button class="enter-btn">Enter</button>
+                    <p>
+                        Adds an explicit Enter key confirmation to activate input, prevent accidential typing.
+                    </p>
+                </div>
+                <div class="description-container">
+                    <button class="active-btn">Active</button>
+                    <p>
+                        When you click or press down on an element, showing it’s being interacted with.
+                    </p>
+                </div>    
+            </div>
+            <hr>
+            <h2>Reflection on Kat Holmes’ Inclusive Design</h2>
+            <div class="text-container">
+                <ul>
+                    <li>The UI components provided feedback through color changes, cursor flashing, and button states, making them easy to understand.</li>
+                    <li>From the video, I understand that balancing efficiency and accessibility is essential. While adding an extra step might slow down power users, it makes the interface more inclusive for those who need structured interactions.</li>
+                </ul>
+                <p class="text-bold">Mouse Users:</p>
+                <ul>
+                    <li>Thinking of people who might have difficulty seeing & hearing, I added a clear color change and screen reader explanations for <strong>"Hover"</strong> to improve accessibility of the UI.</li>
+                </ul>
             
-    </div>
-    
-    <script src="script.js"></script>
-</body>
+                <p class="text-bold">Keyboard Users:</p>
+                <ul>
+                    <li>For those unfamiliar with technology, I added an explicit <strong>"Enter"</strong> confirmation before typing to prevent accidental text input.</li>
+                    <li>This benefits functionality users but sacrifices efficiency.</li>
+                </ul>
+            
+                <p class="text-bold">Example 1 (Accessibility) - ChatGPT's Keyboard Accessibility:</p>
+                <ul>
+                    <li>ChatGPT focuses more on web features compared to mobile.</li>
+                    <li>Allows Tab navigation to move through buttons logically.</li>
+                    <li>Users with motor impairments or no mouse access can still use all functions efficiently.</li>
+                </ul>
+            
+                <p class="text-bold">Example 2 (Inaccessibility) - Instagram's Search Box:</p>
+                <ul>
+                    <li>Instagram prioritizes mobile features over web accessibility.</li>
+                    <li>The search box on the web version is hidden behind a button that must be tapped first.</li>
+                    <li>Users with visual impairments or screen reader reliance may struggle to find the input field quickly.</li>
+                </ul>
+            </div>
+            
+        </div>
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <img class="lightbox-img" id="lightbox-img">
+        </div>
+        
+        <script src="script.js"></script>
+
+    </body>
 </html>

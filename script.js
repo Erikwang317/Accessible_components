@@ -6,6 +6,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const focusBtn = document.querySelector(".focus-btn");
     const activeBtn = document.querySelector(".active-btn");
 
+    const images = document.querySelectorAll(".clickable-img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.querySelector(".close");
+
+    lightbox.style.display = "none";
+
     function toggleButton() {
         if (textBox.value.trim() === "") {
             searchBtn.disabled = true;
@@ -44,5 +51,22 @@ document.addEventListener("DOMContentLoaded", function() {
     activeBtn.addEventListener("click", function () {
         textBox.classList.add("active-effect");
         setTimeout(() => textBox.classList.remove("active-effect"), 200); 
+    });
+
+    images.forEach(img => {
+        img.addEventListener("click", function () {
+            lightbox.style.display = "flex";
+            lightboxImg.src = img.src;
+        });
+    });
+
+    closeBtn.addEventListener("click", function () {
+        lightbox.style.display = "none";
+    });
+
+    lightbox.addEventListener("click", function (e) {
+        if (e.target !== lightboxImg) {
+            lightbox.style.display = "none";
+        }
     });
 });
